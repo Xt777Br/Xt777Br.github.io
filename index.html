@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link type="image/png" rel="icon" href="/icons/iconsquare.png" />
+    <title>Xt</title>
+  </head>
+  <body>
+    <div id="topbar">
+      <img id="main-icon" src="/icons/icon.png" onclick="window.location.href = '/';"/>
+      <div id="search-bar">
+        <img src="/icons/search-icon.webp" />
+        <input type="text" id="search-input" placeholder="Pesquisar..." />
+      </div>
+      <img id="language" src="/icons/flags/brazil.png" />
+    </div>
+    <div id="content">
+      <div id="youtube">
+        <div id="youtube-channel" onclick="window.open('https://www.youtube.com/@xt777br', '_blank');">
+          <img id="youtube-channel-icon" src="/icons/youtube.png" />
+          <h1>Youtube</h1>
+          <p id="subCount">1K Inscritos</p>
+        </div>
+        <div id="youtube-videos">
+          <iframe id="ytlastvideo" src="https://www.youtube.com/@xt777br"></iframe>
+          <div id="ytothersvideos"></div>
+        </div>
+      </div>
+      <h1 class="title">Projetos</h1>
+    </div>
+    <script src="lib/gitrows.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
