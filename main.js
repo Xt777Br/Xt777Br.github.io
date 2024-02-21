@@ -11162,9 +11162,9 @@ const gitrows = new GitRows({'strict':true});
 var posts = []
 
 async function getPosts() {
-  let pages = await gitrows.get("@github/xt777br/xtwebsite/data.json")
+  let pages = await gitrows.get("@github/xt777br/data/data.json")
   for(let i = 0; i < pages["posts_length"]; i++){
-    let post = await gitrows.get(`@github/xt777br/xtwebsite/posts/${i+1}.json`)
+    let post = await gitrows.get(`@github/xt777br/data/posts/${i+1}.json`)
     posts.push(post)
     projectLoad(post)
   }
