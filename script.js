@@ -1,15 +1,13 @@
+var GitRows = require("gitrows");
+
 const searchBar = document.getElementById("search-bar");
 const subCount = document.getElementById("subCount");
-
-searchBar.lastElementChild.onfocus = function () {
-  searchBar.className = "focus";
-};
-searchBar.lastElementChild.onblur = function () {
-  searchBar.className = "";
-};
-
 const ytlast = document.getElementById("ytlastvideo");
 const ytOthers = document.getElementById("ytothersvideos");
+const projects = document.getElementById("projects");
+
+searchBar.lastElementChild.onfocus = function () {searchBar.className = "focus";};
+searchBar.lastElementChild.onblur = function () {searchBar.className = "";};
 
 function roundNum(n = "") {
   n = "10002"
@@ -21,6 +19,14 @@ function roundNum(n = "") {
   }else {
     return n
   }
+}
+
+function projectLoad(project = {}){
+  let projectDiv = document.createElement("div");
+  projectDiv.innerHTML = `<img src="${project["cover"]}"/>
+  <h1>${project["title"]}</h1>
+  <p>${project["desc"]}</p>`
+  projects.appendChild(projectDiv);
 }
 
 fetch(
@@ -54,4 +60,19 @@ fetch(
   })
   .catch(console.error);
 
+const gitrows = new GitRows({'strict':true});
+
+var posts = []
+
+async function getPosts() {
+  let pages = await gitrows.get("@github/xt777br/xtwebsite/data.json")
+  for(let i = 0; i < pages["posts_length"]; i++){
+    let post = await gitrows.get(`@github/xt777br/xtwebsite/posts/${i+1}.json`)
+    posts.push(post)
+    projectLoad(post)
+  }
+
+}
+
+getPosts()
 

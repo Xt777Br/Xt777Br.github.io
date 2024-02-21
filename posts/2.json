@@ -1,0 +1,8 @@
+{
+    "title": "Bedrock ChatGPT",
+    "cover": "https://github.com/Xt777Br/BedrockChatGpt/raw/main/images/bedrock_chatgpt.png",
+    "desc": "ChatGPT implementation for Minecraft Bedrock Edition.",
+    "html": "<h1>Bedrock ChatGpt</h1><p>ChatGpt for Minecraft Bedrock using Web Sockets.</p>",
+    "date": "20/02/2024",
+    "author": "Xt777Br"
+}

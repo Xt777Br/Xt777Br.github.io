@@ -164,6 +164,32 @@ body {
   content: "tocando";
 }
 
+#projects {
+
+}
+
+#projects div {
+  display: block;
+  border: 2px solid #999;
+  border-radius: 10px;
+  text-align: center;
+  width: 670px;
+  height: 370px;
+}
+#projects div img {
+  border: 2px solid #999;
+  border-radius: 8px;
+  margin-top: 9px;
+  width: 650px;
+  height: 300px;
+}
+#projects div h1 {
+  margin: 0px;
+}
+#projects div p {
+  margin: 0px;
+}
+
 @keyframes playing {
   0% {
     filter: brightness(1.25);
