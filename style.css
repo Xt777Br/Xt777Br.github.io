@@ -144,6 +144,10 @@ body {
   flex: 1;
 }
 
+#ytothersvideo::-webkit-scrollbar-thumb {
+  display: none;
+}
+
 #ytothersvideos img {
   width: 250px;
   height: 100px;
@@ -164,10 +168,6 @@ body {
   content: "tocando";
 }
 
-#projects {
-
-}
-
 #projects div {
   display: block;
   border: 2px solid #999;
@@ -180,6 +180,7 @@ body {
 }
 #projects div img {
   border: 2px solid #999;
+  object-fit: cover;
   border-radius: 8px;
   margin-top: 9px;
   width: 650px;
