@@ -11121,12 +11121,12 @@ async function getPosts() {
   if(currentPage!=1){
     let page_previous = document.getElementById("page-previous")
     page_previous.style.opacity = "1";
-    page_previous.onclick = ()=>{window.location.href = `/?page=${currentPage-1}`};
+    page_previous.onclick = ()=>{window.location.href = `?page=${currentPage-1}`};
   }
   if(currentPage!=pages){
     let page_next = document.getElementById("page-next")
     page_next.style.opacity = "1";
-    page_next.onclick = ()=>{window.location.href = `/?page=${currentPage+1}`};
+    page_next.onclick = ()=>{window.location.href = `?page=${currentPage+1}`};
   }
 
   for(let i = 1 + (currentPage>1?(2+5*(pages-2)):0); i <= (currentPage>1?(posts_length>2+pages*5 ? 2+pages*5 : posts_length):2); i++){
