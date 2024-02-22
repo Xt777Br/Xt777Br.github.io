@@ -233,16 +233,25 @@ body {
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: larger;
+  text-align: center;
 }
+
+
 
 #page-previous,
 #page-next {
   display: block;
   cursor: pointer;
+  border: #fff 1px solid;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
   opacity: 0;
 }
 #page-number::before {
+  display: flex;
   content: "Pagina ";
+  text-decoration-line: underline;
 }
 
 
@@ -288,5 +297,9 @@ body {
   #ytothersvideos img {
     width: 150px;
     height: 70px;
+  }
+
+  #pages {
+    width: 95vw;
   }
 }
