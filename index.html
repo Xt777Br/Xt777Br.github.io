@@ -11,27 +11,18 @@
   <body>
     <div id="topbar">
       <img id="main-icon" src="./icons/icon.png" onclick="window.location.href = '/';"/>
-      <div id="search-bar">
-        <img src="./icons/search-icon.webp" />
-        <input type="text" id="search-input" placeholder="Pesquisar..." />
-      </div>
+      <div id="search">
+        <div id="search-bar">
+          <img src="./icons/search-icon.webp">
+          <input type="text" id="search-input" placeholder="Pesquisar...">
+        </div>
+        <div id="search-results" class="">
+        </div>
       <img id="language" src="./icons/flags/brazil.png" />
     </div>
     <div id="content">
-      <div id="youtube">
-        <div id="youtube-channel" onclick="window.open('https://www.youtube.com/@xt777br', '_blank');">
-          <img id="youtube-channel-icon" src="./icons/youtube.png" />
-          <h1>Youtube</h1>
-          <p id="subCount">1K Inscritos</p>
-        </div>
-        <div id="youtube-videos">
-          <iframe id="ytlastvideo" src="https://www.youtube.com/@xt777br"></iframe>
-          <div id="ytothersvideos"></div>
-        </div>
-      </div>
-      <h1 class="title">Projetos e Updates</h1>
-      <div id="projects">
-      </div>
+      <div id="projects"></div>
+      <div id="pages"><p id="page-previous">&lt;&lt; Pagina Anterior</p><p id="page-number">1</p><p id="page-next" style="opacity: 1;"> Próxima Página &gt;&gt;</p></div><p>xt777br @ 2024</p></div>
     </div>
     <script src="./main.js"></script>
   </body>
