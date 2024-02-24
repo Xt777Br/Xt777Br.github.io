@@ -1,0 +1,155 @@
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">Parâmetros</th>
+<th style="text-align:left;">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;"><code>1</code></td>
+<td style="text-align:left;">Mostre a página de ajuda sobre <strong>!chatgpt help</strong>.</td>
+</tr>
+<tr>
+<td style="text-align:left;"><code>2</code></td>
+<td style="text-align:left;">Mostre a página de ajuda sobre <strong>!chatgpt set</strong>.</td>
+</tr>
+<tr>
+<td style="text-align:left;"><code>3</code></td>
+<td style="text-align:left;">Mostre a página de ajuda sobre <strong>!chatgpt info</strong>.</td>
+</tr>
+<tr>
+<td style="text-align:left;"><code>4</code></td>
+<td style="text-align:left;">Mostre a página de ajuda sobre <strong>!chatgpt get</strong>.</td>
+</tr>
+<tr>
+<td style="text-align:left;"><code>5</code></td>
+<td style="text-align:left;">Mostre a página de ajuda sobre <strong>!chatgpt credits</strong>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="setdefineaconfigurao">Set (define a configuração)</h3>
+<pre><code>   !chatgpt set
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">Parâmetros</th>
+<th style="text-align:left;">Descrição</th>
+<th style="text-align:left;">Subparâmetros</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;"><code>model</code></td>
+<td style="text-align:left;">Defina o modelo ChatGpt.</td>
+<td style="text-align:left;">gpt-4 / gpt-3.5-turbo / Variantes</td>
+</tr>
+<tr>
+<td style="text-align:left;"><code>temperature</code></td>
+<td style="text-align:left;">Defina a temperatura do ChatGpt.</td>
+<td style="text-align:left;">0,0 - 2,0</td>
+</tr>
+<tr>
+<td style="text-align:left;"><code>name</code></td>
+<td style="text-align:left;">Defina o nome do ChatGpt.</td>
+<td style="text-align:left;">(Nome de 16 caracteres)</td>
+</tr>
+<tr>
+<td style="text-align:left;"><code>aswner_all</code></td>
+<td style="text-align:left;">Defina o Aswner tudo.</td>
+<td style="text-align:left;">Verdadeiro falso</td>
+</tr>
+<tr>
+<td style="text-align:left;"><code>require_tag</code></td>
+<td style="text-align:left;">Defina a tag necessária.</td>
+<td style="text-align:left;">Verdadeiro falso</td>
+</tr>
+</tbody>
+</table>
+<h3 id="informaes">Informações</h3>
+<pre><code>   !chatgpt info
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">Parâmetro</th>
+<th style="text-align:left;">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">Nenhum</td>
+<td style="text-align:left;">Mostrar algumas informações sobre Bedrock ChatGpt</td>
+</tr>
+</tbody>
+</table>
+<h3 id="getmostraaconfigurao">Get (mostra a configuração)</h3>
+<pre><code>   !chatgpt get
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">Parâmetros</th>
+<th style="text-align:left;">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;"><code>modelo</code></td>
+<td style="text-align:left;">Mostra o modelo ChatGpt.</td>
+</tr>
+<tr>
+<td style="text-align:left;"><code>temperatura</code></td>
+<td style="text-align:left;">Mostra a temperatura do ChatGpt.</td>
+</tr>
+<tr>
+<td style="text-align:left;"><code>nome</code></td>
+<td style="text-align:left;">Mostra o nome do ChatGpt.</td>
+</tr>
+<tr>
+<td style="text-align:left;"><code>aswner_all</code></td>
+<td style="text-align:left;">Mostra se Respode tudo.</td>
+</tr>
+<tr>
+<td style="text-align:left;"><code>require_tag</code></td>
+<td style="text-align:left;">Mostre a tag .</td>
+</tr>
+</tbody>
+</table>
+<h3 id="crditos">Créditos</h3>
+<pre><code>   !chatgpt credits
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">Parâmetro</th>
+<th style="text-align:left;">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">Nenhum</td>
+<td style="text-align:left;">Mostra os créditos pelo desenvolvimento do Bedrock ChatGpt!</td>
+</tr>
+</tbody>
+</table>
+<h2 id="configurando">Configurando</h2>
+<p>Para usar o ChatGpt é necessária uma chave OpenAi!</p>
+<p>OpenAi possui uma versão gratuita com uso limitado! E uma versão paga com menos limitação!
+Você pode obter sua chave em https://openai.com/</p>
+<h2 id="executando">Executando</h2>
+<h3 id="executandonowindows">Executando no Windows:</h3>
+<p>No Windows é muito fácil de executar! Ele é executado como um programa normal, mas exigirá permissão de firewall e você precisará permitir acesso público e privado!</p>
+<h3 id="rodandoemlinuxtermuxprootfuncionamelhor">Rodando em Linux/Termux (Proot funciona melhor!)</h3>
+<p>Para rodar no Linux você precisa executar dentro do diretório do programa e digitar no terminal:</p>
+<pre><code class="bash language-bash">./bedrock_chatgpt
+</code></pre>
+<h2 id="conectando">Conectando</h2>
+<p>Se você tentar conectar-se no Minecraft Windows e não funcionar, digite o seguinte comando no PowerShell como Admin:</p>
+<pre><code class="PowerShell language-PowerShell">CheckNetIsolation LoopbackExempt -a -n="Microsoft.MinecraftUWP_8wekyb3d8bbwe"
+</code></pre>
+<h2 id="problemasconhecidos">Problemas conhecidos</h2>
+<p><strong><em><em>Falha ao iniciar após fechar o servidor!</em></strong></em></p>
+<p><strong><em><em>Talvez um começo lento na primeira partida!</em></strong></em></p>

@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-
+@font-face {
+  font-family: "Mundo Sans";
+  src: url('/fonts/Mundo\ Sans\ Std\ Medium.otf')  format('otf');
+}
 
 body {
   margin: 0;
@@ -31,22 +34,29 @@ body {
 }
 
 #search  {
-  width: 50%;
+  display: flex;
+  align-self: center;
+  width: 70%;
+  max-width: 775px;
 }
 
 #search-results {
   display: none;
-  position: absolute;
+  position: fixed;
+  align-self: center;
+  top: 50px;
   z-index: 2;
-  width: 50%;
+  width: calc(70% - 4px);
+  max-width: 771px;
   background-color: #121212;
   border: #787878 2px solid;
   border-radius: 10px;
-  padding-left: 10px;
+  padding-left: 4px;
 }
 
+
 #search-results.show {
-  display: inherit;
+  display: block;
 }
 
 #search-bar {
@@ -179,7 +189,6 @@ body {
 #ytothersvideos img.ytacvd {
   border: 2px solid #999;
   transition: border 2s ease-out, filter 2s ease-out;
-  ;
   animation: playing 3s ease-in-out infinite;
 }
 
@@ -187,7 +196,7 @@ body {
   content: "tocando";
 }
 
-#projects div {
+#postsShow div {
   display: block;
   border: 2px solid #999;
   border-radius: 10px;
@@ -197,7 +206,7 @@ body {
   margin-top: 10px;
   background-color: #333333aa;
 }
-#projects div img {
+#postsShow div img {
   border: 2px solid #999;
   object-fit: cover;
   border-radius: 8px;
@@ -205,12 +214,141 @@ body {
   width: 650px;
   height: 300px;
 }
-#projects div h1 {
+#postsShow div h1 {
   margin: 0px;
 }
-#projects div p {
+#postsShow div p {
   margin: 0px;
 }
+
+.postLoading h1 span {
+  text-align: center;
+  color: #00000000;
+  width: fit-content;
+  font-size: medium;
+  animation: postLoadingAnim 2s ease-in-out infinite;
+  background: linear-gradient(to right, #333333aa 0%, #444444aa 47.25%, #444444aa 52.25%, #333333aa 100%);
+  background-size: 5000px 650px;
+}
+
+.postLoading p span {
+  text-align: center;
+  color: #00000000;
+  width: fit-content;
+  font-size: small;
+  animation: postLoadingAnim 2s ease-in-out infinite;
+  background: linear-gradient(to right, #333333aa 0%, #444444aa 47.25%, #444444aa 52.25%, #333333aa 100%);
+  background-size: 5000px 650px;
+}
+
+.postLoading center {
+  border: 2px solid #999;
+  border-radius: 8px;
+  translate: 1.25% 0;
+  margin-top: 9px;
+  width: 650px;
+  height: 300px;
+  animation: postLoadingAnim 2s ease-in-out infinite;
+  background: linear-gradient(to right, #333333aa 0%, #444444aa 47.25%, #444444aa 52.25%, #333333aa 100%);
+  background-size: 5000px 650px;
+}
+
+
+#post-content {
+  margin: 10px;
+  width: 90%;
+  max-width: 800px;
+  background-color: #121212;
+  font-family: "Mundo Sans", sans-serif;
+  color: white;
+}
+
+#post-content p.details {
+  color: #555;
+  text-align: right;
+  font-size: small;
+}
+
+#post-content h1, #post-content h2 {
+  border-bottom: 2px solid #55555555;
+  width: 100%;
+}
+
+#post-content h1 {
+  font-size: 30px;
+  padding-bottom: 12px;
+}
+
+#post-content h2 {
+  font-size: 25px;
+}
+
+#post-content h3 {
+  font-size: 20px;
+}
+
+#post-content p {
+  font-size: 18px;
+}
+
+#post-content img {
+  width: 100%;
+}
+#post-content pre {
+  display: flex;
+  white-space: pre-wrap;
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  background-color: #333;
+  height: 50px;
+  align-items: center;
+  margin-left: 3px;
+}
+
+#post-content pre code {
+  background-color: transparent;
+  border: 0;
+  padding-left: 17px;
+  font-size: 14px;
+}
+
+#post-content table {
+  background: #333;
+  border: 2px solid #121212;
+}
+#post-content th {
+  background: #121212;
+  padding: 8px 15px;
+  font-size: 16px;
+}
+#post-content td {
+  padding: 5px 15px;
+  font-size: 16px;
+}
+#post-content tr:nth-child(odd) {
+  background: #121212;
+  border: 2px solid #121212;
+}
+#post-content tr:nth-child(even) {
+  background: #191919;
+  border: 2px solid #191919;
+}
+
+#post-content tr:nth-child(odd) td {
+  background: #121212;
+  border: 2px solid #121212;
+}
+#post-content tr:nth-child(even) td {
+  background: #191919;
+  border: 2px solid #191919;
+}
+
+#post-content td code {
+  border: #444;
+  background: #444;
+  padding: 1px 3px;
+  border-radius: 5px;
+}
+
 
 @keyframes playing {
   0% {
@@ -224,6 +362,19 @@ body {
   100% {
     filter: brightness(1.25);
   }
+}
+
+@keyframes postLoadingAnim {
+  0% {
+    background-position-x: 100%;
+  }
+  50% {
+    background-position-x: -0%;
+  }
+  100% {
+    background-position-x: 100%;
+  }
+  
 }
 
 #pages {
@@ -281,12 +432,16 @@ body {
     height: 70px;
   }
 
-  #projects div {
+  #postsShow {
+    width: 95%;
+  }
+
+  #postsShow div {
     width: 100%;
     height: 270px;
   }
 
-  #projects div img {
+  #postsShow div img {
     width: calc(100% - 20px);
     height: 200px;
   }
@@ -297,6 +452,14 @@ body {
   #ytothersvideos img {
     width: 150px;
     height: 70px;
+  }
+
+  #post-content div.table{
+    overflow-x: auto;
+  }
+
+  #post-content table{
+    width: 100%;
   }
 
   #pages {
